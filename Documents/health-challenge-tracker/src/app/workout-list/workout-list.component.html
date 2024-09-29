@@ -1,0 +1,29 @@
+<div>
+    <input [(ngModel)]="searchTerm" placeholder="Search by name" />
+    <select [(ngModel)]="filterType">
+      <option value="">All Types</option>
+      <option *ngFor="let type of workoutTypes">{{ type }}</option>
+    </select>
+  </div>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Workouts</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of paginatedUsers">
+        <td>{{ user.name }}</td>
+        <td>
+          <ul>
+            <li *ngFor="let workout of user.workouts">{{ workout.type }}: {{ workout.minutes }} mins</li>
+          </ul>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <mat-paginator [length]="users.length" [pageSize]="5" (page)="onPageChange($event)"></mat-paginator>
+  

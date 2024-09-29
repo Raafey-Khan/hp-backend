@@ -1,0 +1,22 @@
+.workout-list-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  mat-card {
+    padding: 16px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  .mat-header-cell, .mat-cell {
+    text-align: left;
+  }
+  
+  mat-card-title {
+    font-size: 1.5em;
+  }
+  

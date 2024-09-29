@@ -1,0 +1,23 @@
+<!-- Header with Navigation -->
+<header>
+  <mat-toolbar color="primary">
+    <span>Health Challenge </span>
+    <span class="spacer"></span>
+    <nav>
+      <a mat-button routerLink="/">Home</a>
+      <a mat-button routerLink="/workout-form">Workout Form</a>
+    </nav>
+  </mat-toolbar>
+</header>
+
+<!-- Main Content Area -->
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Footer -->
+<footer>
+  <mat-toolbar color="accent">
+    <span>&copy; 2024 Health Challenge Tracker</span>
+  </mat-toolbar>
+</footer>
